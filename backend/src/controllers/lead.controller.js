@@ -4,7 +4,7 @@ export const createLead = async (req, res) => {
   try {
     const { name, email, phone, status } = req.body;
 
-    if (!name || !email || !phone || !status) {
+    if (!name || !email || !phone) {
       return res.status(400).json({
         message: "All fields are required",
       });
@@ -15,7 +15,7 @@ export const createLead = async (req, res) => {
       phone,
       status,
     });
-    return res.status(200).json({
+    return res.status(201).json({
       message: "Lead created successfully",
       lead,
     });
