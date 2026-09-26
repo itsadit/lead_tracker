@@ -9,11 +9,13 @@ const leadSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    match: [/^\S+@\S+\.\S+$/, "Invalid email format"],
   },
   phone: {
     type: String,
     required: true,
     unique: true,
+    match: [/^\d{10}$/, "Phone must be 10 digits"],
   },
   status: {
     type: String,

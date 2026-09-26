@@ -4,7 +4,7 @@
   "description": "A customer tracking app where you can track your leads on them for your sales.",
   "license": "ISC",
   "author": "aditya",
-  "type": "commonjs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
